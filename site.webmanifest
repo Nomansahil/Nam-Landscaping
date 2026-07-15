@@ -1,0 +1,16 @@
+{
+  "name": "NAM Landscaping",
+  "short_name": "NAM",
+  "description": "Landscaping and swimming pool maintenance in Dubai by one trusted team.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#143527",
+  "theme_color": "#143527",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

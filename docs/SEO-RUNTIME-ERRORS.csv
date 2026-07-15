@@ -1,0 +1,6 @@
+Page,Error type,Console message,Failed request,Source file,SEO impact,User impact,Fix,Retest
+/index.html,none,(no console output),none,n/a,None,None,n/a,Passed
+/services/landscaping-dubai.html,none,(no console output),none,n/a,None,None,n/a,Passed
+/contact.html,none,(no console output),none,n/a,None,None,n/a,Passed
+/404.html,none,(no console output),none,n/a,None,None,n/a,Passed
+ALL,none,"Static site — JS is progressive enhancement only (nav toggle, scroll-reveal, WhatsApp form handoff). No SPA, no hydration, no client-side routing. Browser console returned zero logs/errors across representative pages.",none,n/a,None,None,n/a,Passed

@@ -1,0 +1,30 @@
+# HTTP response headers for Netlify / Cloudflare Pages (ignored by hosts that don't
+# read _headers, e.g. GitHub Pages — set the equivalent there). Safe, non-breaking
+# defaults: caching for static assets + baseline security headers. No CSP here (the
+# site uses a third-party Google Maps iframe and a few inline style attributes — add a
+# tuned Content-Security-Policy at deploy time once the final host is known).
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), browsing-topics=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Fonts: self-hosted, stable filenames — cache hard.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000
+
+# Photos: stable, content-named — cache hard.
+/assets/photos/*
+  Cache-Control: public, max-age=31536000
+
+# Minified CSS/JS: filenames aren't content-hashed, so allow daily revalidation.
+/css/*
+  Cache-Control: public, max-age=86400
+/js/*
+  Cache-Control: public, max-age=86400
+
+# HTML: short cache so content updates surface quickly.
+/*.html
+  Cache-Control: public, max-age=3600

@@ -1,0 +1,149 @@
+{
+  "homeHero": {
+    "base": "villa-garden-pool-landscaping-dubai",
+    "widths": [
+      1600,
+      1024,
+      720
+    ],
+    "alt": "Designed villa garden with a lawn, paved pathway and planting"
+  },
+  "og": "/assets/photos/villa-garden-pool-landscaping-dubai-og.jpg",
+  "landscaping": {
+    "base": "villa-garden-landscaping-design",
+    "widths": [
+      1600,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Designed villa garden with raised stone planters, a lawn and stepping stones"
+  },
+  "gardenCare": {
+    "base": "garden-maintenance-lawn-care",
+    "widths": [
+      1280,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Well-maintained villa garden with a tidy lawn, hedges and seating"
+  },
+  "poolMaintenance": {
+    "base": "swimming-pool-maintenance",
+    "widths": [
+      1024,
+      768,
+      480
+    ],
+    "alt": "Clean villa swimming pool with sun loungers and a dining area"
+  },
+  "poolCleaning": {
+    "base": "swimming-pool-cleaning",
+    "widths": [
+      1600,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Sparkling clean swimming pool with crystal-clear water"
+  },
+  "poolRepair": {
+    "base": "swimming-pool-repair",
+    "widths": [
+      1600,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Swimming pool and deck serviced and maintained at a villa"
+  },
+  "poolBuild": {
+    "base": "swimming-pool-construction",
+    "widths": [
+      1600,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Swimming pool under construction at a villa"
+  },
+  "irrigation": {
+    "base": "garden-irrigation-sprinkler",
+    "widths": [
+      1600,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Garden sprinkler watering a green lawn"
+  },
+  "grass": {
+    "base": "artificial-grass-installation",
+    "widths": [
+      800,
+      600,
+      480
+    ],
+    "alt": "Rolls of artificial grass being installed over a prepared base"
+  },
+  "lighting": {
+    "base": "garden-landscape-lighting",
+    "widths": [
+      800,
+      600,
+      480
+    ],
+    "alt": "Garden patio at night with landscape lighting and a fire feature"
+  },
+  "waterFeature": {
+    "base": "garden-fountain-water-feature",
+    "widths": [
+      1600,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Circular garden fountain water feature at a large property"
+  },
+  "hardscape": {
+    "base": "outdoor-hardscaping-paving",
+    "widths": [
+      1600,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Modern hardscaping with pavers, gravel and grass strips at a villa"
+  },
+  "skyline": {
+    "base": "estate-landscaping-courtyard",
+    "widths": [
+      1600,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Landscaped estate courtyard with lawns, palms and paved walkways"
+  },
+  "facadeDusk": {
+    "base": "villa-garden-evening",
+    "widths": [
+      1600,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Landscaped villa garden with warm lighting in the evening"
+  },
+  "pergola": {
+    "base": "pergola-shade-structure",
+    "widths": [
+      1244,
+      1024,
+      768,
+      480
+    ],
+    "alt": "Timber pergola with shaded seating and a fire feature in a villa backyard"
+  }
+}

@@ -1,0 +1,21 @@
+URL,Primary intent,Primary keyword/topic,Secondary keywords,Dubai modifier,Conversion goal,Cannibalization risk,Internal-link sources
+/,Brand + category,Landscaping & swimming pool services Dubai,"outdoor company Dubai, garden and pool one team",Dubai (city-wide),Quote / site visit,Low (brand-level only; does not target individual service terms),All pages (logo + footer)
+/services.html,Category hub,Landscaping & pool services Dubai,"list of services, outdoor services Dubai",Dubai,Navigate to service,Low,Home; header nav; all service pages
+/annual-maintenance-contracts.html,Offer,Annual maintenance contract Dubai,"AMC garden pool, maintenance package Dubai",Dubai,Quote,Low (distinct offer page),Home; service pages; footer
+/services/landscaping-dubai.html,Commercial,Landscaping Dubai,"landscape design, garden landscaping, villa landscaping",Dubai,Quote / site visit,Distinct from garden-maintenance (build vs upkeep),Home; hub; related-services; hardscaping
+/services/garden-maintenance-dubai.html,Commercial,Garden maintenance Dubai,"garden upkeep, lawn care, planting maintenance",Dubai,Quote,Distinct from landscaping (upkeep vs build),Hub; landscaping; irrigation; AMC
+/services/swimming-pool-maintenance-dubai.html,Commercial,Swimming pool maintenance Dubai,"pool cleaning service, water testing, weekly pool service",Dubai,Quote,Distinct from cleaning (ongoing chemistry vs cleaning task),Hub; cleaning; repair; AMC
+/services/swimming-pool-cleaning-dubai.html,Commercial,Swimming pool cleaning Dubai,"pool vacuum, brushing, skimming",Dubai,Quote,Differentiated: one-off/deep clean vs maintenance contract,Hub; maintenance; repair
+/services/swimming-pool-repair-dubai.html,Commercial,Swimming pool repair Dubai,"pump repair, leak detection, equipment repair",Dubai,Quote,Distinct (fault fixing). Competitor gap owned,Hub; maintenance; construction
+/services/swimming-pool-construction-dubai.html,Commercial,Swimming pool construction Dubai,"pool builder, new pool, pool design Dubai",Dubai,Quote / site visit,Distinct (build),Hub; repair; water-features; home
+/services/irrigation-installation-repair-dubai.html,Commercial,Irrigation installation & repair Dubai,"drip irrigation, sprinkler repair, smart controller",Dubai,Quote,Distinct,Hub; landscaping; garden-maintenance; grass
+/services/artificial-grass-installation-dubai.html,Commercial,Artificial grass installation Dubai,"fake grass, synthetic turf, lawn alternative",Dubai,Quote,Distinct,Hub; landscaping; hardscaping; irrigation
+/services/pergola-shade-structures-dubai.html,Commercial,Pergola & shade structures Dubai,"pergola builder, shade sail, gazebo Dubai",Dubai,Quote / site visit,Distinct,Hub; landscaping; lighting
+/services/landscape-lighting-dubai.html,Commercial,Landscape lighting Dubai,"garden lighting, outdoor LED, pathway lights",Dubai,Quote,Distinct,Hub; landscaping; pergola; water-features
+/services/water-features-dubai.html,Commercial,Water features Dubai,"fountain installation, water wall, pond builder",Dubai,Quote / site visit,Distinct,Hub; lighting; pool-construction
+/services/hardscaping-outdoor-upgrades-dubai.html,Commercial,Hardscaping Dubai,"paving, decking, outdoor flooring, retaining walls",Dubai,Quote / site visit,Distinct,Hub; landscaping; artificial-grass
+/projects.html,Commercial investigation,Landscaping & pool projects Dubai,"portfolio, before and after, completed work",Dubai,Quote,Low,Home; service example cards; about
+/areas-we-serve.html,Local commercial,Landscaping areas Dubai,"communities served, villa areas Dubai",Dubai + community names,Quote / site visit,Low (single consolidated page, NOT per-community doorway pages),Home; footer; about
+/about.html,Trust,About NAM Landscaping,"who we are, one team, in-house",Dubai,Build trust -> quote,None,Home; footer
+/faq.html,Informational,Landscaping & pool FAQ Dubai,"costs factors, scheduling, what's included",Dubai,Assist -> quote,Low,Every service page links here
+/contact.html,Transactional,Contact landscaping Dubai,"free site visit, quote request, WhatsApp",Dubai,Form / call / WhatsApp,None,Every page (header CTA + sticky bar + CTA bands)
