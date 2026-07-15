@@ -18,6 +18,18 @@ ServerSignature Off
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Spam "?_g=<random>" URLs (external bot/link-spam campaign; 111k+ in Search
+  # Console): 301 straight to the canonical origin, same path, query string
+  # dropped (trailing '?' on the substitution). Must stay BEFORE the canonical-
+  # host rule: that rule's substitution has no '?', so it re-appends ?_g=...
+  # and would force a second hop. Loop-safe: the target has no query string
+  # and this rule requires _g in the query, so it can never re-match.
+  # (?:^|&) + (?:=|&|$) boundaries match only the _g param itself - never
+  # _gl=/_ga= (GA linker params) or params merely ending in "_g".
+  RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+  RewriteCond %{QUERY_STRING} (?:^|&)_g(?:=[^&]*)?(?:&|$) [NC]
+  RewriteRule ^ https://namlandscaping.ae%{REQUEST_URI}? [R=301,L]
+
   # Canonical host: HTTPS + non-www in one 301 hop.
   # Handles http://, http://www., and https://www. in a single redirect (no double-hop).
   RewriteCond %{HTTPS} off [OR]

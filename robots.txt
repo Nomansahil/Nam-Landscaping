@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /*?*_g=
 
 Sitemap: https://namlandscaping.ae/sitemap.xml
