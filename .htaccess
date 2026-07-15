@@ -48,6 +48,11 @@ ServerSignature Off
   # passed the tracker whitelist above, so carry it to the homepage.
   RewriteRule ^home/?$ https://namlandscaping.ae/ [NC,R=301,L]
 
+  # Development/build files ship with the git deploy: answer 404 (not 403) so
+  # Search Console logs a plain not-found instead of an access error.
+  RewriteRule ^(docs|build|scripts|node_modules)(/|$) - [NC,R=404,L]
+  RewriteRule ^(package\.json|package-lock\.json|README\.md|serve\.json|_headers)$ - [R=404,L]
+
   # Trailing slash → serve the page IN PLACE (200, NO redirect) when a matching .html
   # page exists. Fixes /services/ (a real directory of sub-pages) returning 403 without
   # any redirect. Pages use root-absolute asset/link paths, so they render correctly at
