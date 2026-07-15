@@ -194,8 +194,8 @@ function head(page, p) {
   <link rel="icon" href="${FAVICON}">
   <link rel="apple-touch-icon" href="${p}assets/apple-touch-icon.png">
   <link rel="manifest" href="${p}site.webmanifest">
-  <link rel="preload" as="font" type="font/woff2" href="${p}assets/fonts/inter-latin-4.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="${p}assets/fonts/fraunces-latin-2.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="${p}assets/fonts/poppins-latin-2.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="${p}assets/fonts/poppins-latin-6.woff2" crossorigin>
 ${page.heroImg ? `  <link rel="preload" as="image" href="${page.heroImg}" media="(min-width: 641px)" fetchpriority="high">\n` : ""}${page.heroImgSm ? `  <link rel="preload" as="image" href="${page.heroImgSm}" media="(max-width: 640px)" fetchpriority="high">\n` : ""}  <link rel="stylesheet" href="${p}css/styles.min.css">
 ${(page.schema || [])
   .map(

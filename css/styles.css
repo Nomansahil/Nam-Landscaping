@@ -31,8 +31,8 @@
   --radius-sm: 9px;
   --shadow-1: 0 1px 3px rgba(20, 35, 28, 0.08), 0 6px 18px rgba(20, 35, 28, 0.07);
   --shadow-2: 0 4px 10px rgba(20, 35, 28, 0.10), 0 16px 40px rgba(20, 35, 28, 0.12);
-  --font-head: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-head: "Poppins", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Poppins", -apple-system, "Segoe UI", Roboto, sans-serif;
   --wrap: 1140px;
   --wrap-narrow: 760px; /* long-form reading measure */
   --header-h: 64px;
@@ -146,15 +146,15 @@ strong { color: var(--green-900); }
   max-height: calc(100dvh - var(--header-h)); overflow-y: auto;
 }
 .site-nav ul { list-style: none; margin: 0; padding: 0.75rem 1.25rem 1.25rem; }
-.site-nav a { display: block; padding: 0.7rem 0.25rem; text-decoration: none; font-weight: 600; color: #e7efe9; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+.site-nav a { display: block; padding: 0.7rem 0.25rem; text-decoration: none; font-weight: 500; color: #e7efe9; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
 .site-nav a:hover, .site-nav a[aria-current] { color: var(--gold-500); }
 .site-nav li:last-child > a { border-bottom: 0; }
 .nav-sub { list-style: none; padding: 0 0 0.5rem 1rem; margin: 0; }
-.nav-sub a { font-weight: 400; font-size: 0.93rem; color: #b9c9be; padding-block: 0.6rem; }
+.nav-sub a { font-weight: 500; font-size: 0.93rem; color: #b9c9be; padding-block: 0.6rem; }
 .nav-sub-toggle {
   display: flex; width: 100%; align-items: center; justify-content: space-between;
   background: none; border: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); cursor: pointer;
-  font: 600 1rem var(--font-body); color: #e7efe9; padding: 0.7rem 0.25rem;
+  font: 500 1rem var(--font-body); color: #e7efe9; padding: 0.7rem 0.25rem;
 }
 .nav-sub-toggle:hover { color: var(--gold-500); }
 .nav-sub-toggle::after { content: "+"; font-size: 1.2rem; color: var(--gold-500); }
@@ -166,7 +166,7 @@ a.header-cta { display: none; } /* outranks .btn's display in the cascade */
 .header-map {
   display: inline-flex; align-items: center; gap: 0.45rem; flex: none; margin-left: auto;
   padding: 0.6rem 0.95rem; border-radius: 999px; text-decoration: none; white-space: nowrap;
-  font: 600 0.9rem var(--font-body); color: var(--green-900);
+  font: 500 0.9rem var(--font-body); color: var(--green-900);
   border: 1px solid rgba(0, 0, 0, 0.06); background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18); transition: transform 0.15s, box-shadow 0.15s;
 }
@@ -204,7 +204,7 @@ body.nav-open { overflow: hidden; } /* lock page scroll while the mobile menu is
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
   padding: 0.8rem 1.5rem; border-radius: 999px; border: 2px solid transparent;
-  font: 600 0.98rem var(--font-body); letter-spacing: 0.01em; text-decoration: none; cursor: pointer;
+  font: 500 0.98rem var(--font-body); letter-spacing: 0.01em; text-decoration: none; cursor: pointer;
   transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
 }
 .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-1); }
@@ -468,7 +468,7 @@ body.nav-open { overflow: hidden; } /* lock page scroll while the mobile menu is
 .google-btn {
   display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 1.7rem;
   background: #fff; color: var(--green-900); border: 1px solid var(--line); border-radius: 999px;
-  font: 600 1.02rem var(--font-body); text-decoration: none; box-shadow: var(--shadow-1);
+  font: 500 1.02rem var(--font-body); text-decoration: none; box-shadow: var(--shadow-1);
   transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
 }
 .google-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: var(--gold-500); color: var(--green-900); }
@@ -577,7 +577,7 @@ body.nav-open { overflow: hidden; } /* lock page scroll while the mobile menu is
 .sticky-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
   padding: 0.72rem; border-radius: var(--radius-sm); text-decoration: none;
-  font: 600 0.95rem var(--font-body); color: #fff;
+  font: 500 0.95rem var(--font-body); color: #fff;
   background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16);
   transition: background 0.15s;
 }
