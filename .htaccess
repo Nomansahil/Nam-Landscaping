@@ -18,16 +18,23 @@ ServerSignature Off
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Spam "?_g=<random>" URLs (external bot/link-spam campaign; 111k+ in Search
-  # Console): 301 straight to the canonical origin, same path, query string
-  # dropped (trailing '?' on the substitution). Must stay BEFORE the canonical-
-  # host rule: that rule's substitution has no '?', so it re-appends ?_g=...
-  # and would force a second hop. Loop-safe: the target has no query string
-  # and this rule requires _g in the query, so it can never re-match.
-  # (?:^|&) + (?:=|&|$) boundaries match only the _g param itself - never
-  # _gl=/_ga= (GA linker params) or params merely ending in "_g".
-  RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
-  RewriteCond %{QUERY_STRING} (?:^|&)_g(?:=[^&]*)?(?:&|$) [NC]
+  # Query-string hygiene: this static site takes NO functional query parameters.
+  # 301 any GET/HEAD request whose query string contains anything OTHER than
+  # known click/campaign trackers (utm_*, gad_* [Google Ads], gclid family,
+  # fbclid/mibextid, msclkid, ttclid, twclid, li_fat_id, Mailchimp mc_*,
+  # igshid/igsh, sccid [Snapchat], srsltid, gtm_debug [Tag Assistant], yclid,
+  # GA linker _gl/_ga) to the canonical origin, same path, query dropped.
+  # Kills the ?_g= spam flood (111k+ URLs in Search Console), legacy WordPress
+  # ?p=/?page_id=, and any future junk param. Must stay BEFORE the canonical-
+  # host rule (whose substitution has no '?' and would re-append the query).
+  # Loop-safe: the target carries no query string, and the !^$ guard skips
+  # query-less requests. Tradeoff (intentional): a MIXED query such as
+  # ?utm_source=x&_g=1 is treated as junk and the whole query is dropped.
+  # NOTE: the token list appears TWICE below (first param + repeated params);
+  # keep both copies identical when editing.
+  RewriteCond %{REQUEST_METHOD} ^(?:GET|HEAD)$
+  RewriteCond %{QUERY_STRING} !^$
+  RewriteCond %{QUERY_STRING} !^(?:(?:utm_|gad_)[A-Za-z0-9_]+|gclid|gclsrc|dclid|gbraid|wbraid|fbclid|mibextid|msclkid|ttclid|twclid|li_fat_id|mc_cid|mc_eid|igshid|igsh|sccid|srsltid|gtm_debug|yclid|_gl|_ga)=[^&]*(?:&(?:(?:utm_|gad_)[A-Za-z0-9_]+|gclid|gclsrc|dclid|gbraid|wbraid|fbclid|mibextid|msclkid|ttclid|twclid|li_fat_id|mc_cid|mc_eid|igshid|igsh|sccid|srsltid|gtm_debug|yclid|_gl|_ga)=[^&]*)*$ [NC]
   RewriteRule ^ https://namlandscaping.ae%{REQUEST_URI}? [R=301,L]
 
   # Canonical host: HTTPS + non-www in one 301 hop.
@@ -35,6 +42,11 @@ ServerSignature Off
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} ^www\. [NC]
   RewriteRule ^ https://namlandscaping.ae%{REQUEST_URI} [R=301,L]
+
+  # Legacy WordPress homepage slug from the previous site on this domain.
+  # No trailing '?' on purpose: any query that reaches this rule has already
+  # passed the tracker whitelist above, so carry it to the homepage.
+  RewriteRule ^home/?$ https://namlandscaping.ae/ [NC,R=301,L]
 
   # Trailing slash → serve the page IN PLACE (200, NO redirect) when a matching .html
   # page exists. Fixes /services/ (a real directory of sub-pages) returning 403 without
