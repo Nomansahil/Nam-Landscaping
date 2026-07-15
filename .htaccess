@@ -61,9 +61,13 @@ ServerSignature Off
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.+?)/$ $1.html [L]
 
-  # Clean URLs: internally serve /page from page.html (no redirect, transparent to client)
+  # Clean URLs: internally serve /page from page.html (no redirect, transparent
+  # to client). No !-d guard on purpose: /services is BOTH a real directory and
+  # a page (services.html) — without this, mod_dir 301s the canonical sitemap
+  # URL /services to /services/, whose content canonicals back to /services (a
+  # redirect/canonical conflict that stalls indexing). Directories without an
+  # .html twin still fall through untouched.
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.+?)/?$ $1.html [L]
 </IfModule>
